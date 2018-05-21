@@ -1,6 +1,6 @@
-# c---code-actions README
+# cpp-code-actions README
 
-This is the README for your extension "c---code-actions". After writing up a brief description, we recommend including the following sections.
+This is the README for your extension "cpp-code-actions". After writing up a brief description, we recommend including the following sections.
 
 ## Features
 
