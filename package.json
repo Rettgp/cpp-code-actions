@@ -1,5 +1,5 @@
 {
-    "name": "c---code-actions",
+    "name": "cpp-code-actions",
     "displayName": "C++ Code Actions",
     "description": "Custom Context Menu Code Actions For C++",
     "version": "0.0.1",
@@ -11,14 +11,25 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.sayHello"
+        "onCommand:extension.CreateDefinition"
     ],
     "main": "./extension",
     "contributes": {
-        "commands": [{
-            "command": "extension.sayHello",
-            "title": "Hello World"
-        }]
+        "commands": [
+            {
+                "command": "extension.CreateDefinition",
+                "title": "Say Hello"
+            }
+        ],
+        "menus": {
+            "editor/context": [
+                {
+                    "when": "resourceLangId == cpp",
+                    "command": "extension.CreateDefinition",
+                    "group": "YourGroup@1"
+                }
+            ]
+        }
     },
     "scripts": {
         "postinstall": "node ./node_modules/vscode/bin/install",
