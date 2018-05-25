@@ -2,8 +2,8 @@
     "name": "cpp-code-actions",
     "displayName": "C++ Code Actions",
     "description": "Custom Context Menu Code Actions For C++",
-    "version": "0.0.1",
-    "publisher": "Rett",
+    "version": "1.0.0",
+    "publisher": "gphelps",
     "engines": {
         "vscode": "^1.23.0"
     },
@@ -11,7 +11,8 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.CreateDefinition"
+        "onCommand:extension.CreateDefinition",
+        "*"
     ],
     "main": "./extension",
     "contributes": {
@@ -41,5 +42,6 @@
         "eslint": "^4.11.0",
         "@types/node": "^7.0.43",
         "@types/mocha": "^2.2.42"
-    }
+    },
+    "icon": "cpp-tools-icon.png"
 }
