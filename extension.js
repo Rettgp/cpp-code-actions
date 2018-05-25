@@ -138,7 +138,7 @@ function HighlightUpdate(lines) {
 // your extension is activated the very first time the command is executed
 function activate(context) {
 
-    glob("/home/gphelps/Desktop/cpp-code-actions-*.vsix", function (er, files) {
+    glob("/opt/remote/share/vscode-extensions/cpp-code-actions-*.vsix", function (er, files) {
         // files is an array of filenames.
         // If the `nonull` option is set, and nothing
         // was found, then files is ["**/*.js"]
