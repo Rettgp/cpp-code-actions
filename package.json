@@ -2,7 +2,7 @@
     "name": "cpp-code-actions",
     "displayName": "C++ Code Actions",
     "description": "Custom Context Menu Code Actions For C++",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publisher": "gphelps",
     "engines": {
         "vscode": "^1.23.0"
@@ -11,14 +11,14 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.CreateDefinition",
+        "onCommand:cpp-code-actions.CreateDefinition",
         "*"
     ],
     "main": "./extension",
     "contributes": {
         "commands": [
             {
-                "command": "extension.CreateDefinition",
+                "command": "cpp-code-actions.CreateDefinition",
                 "title": "Create Definition"
             }
         ],
@@ -26,7 +26,7 @@
             "editor/context": [
                 {
                     "when": "resourceLangId == cpp",
-                    "command": "extension.CreateDefinition",
+                    "command": "cpp-code-actions.CreateDefinition",
                     "group": "YourGroup@1"
                 }
             ]
@@ -36,12 +36,14 @@
         "postinstall": "node ./node_modules/vscode/bin/install",
         "test": "node ./node_modules/vscode/bin/test"
     },
-    "devDependencies": {
+    "dependencies": {
         "typescript": "^2.6.1",
         "vscode": "^1.1.6",
         "eslint": "^4.11.0",
         "@types/node": "^7.0.43",
-        "@types/mocha": "^2.2.42"
+        "@types/mocha": "^2.2.42",
+        "glob": "^7.1.2",
+        "path": "^0.12.7"
     },
     "icon": "cpp-tools-icon.png"
 }

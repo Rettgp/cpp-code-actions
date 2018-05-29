@@ -5,7 +5,6 @@
 const vscode = require('vscode');
 var path = require("path");
 var fs = require('fs');
-var util = require('util');
 var glob = require('glob');
 
 function FindClassNamespace(text_doc, line_num) {
@@ -172,7 +171,7 @@ function activate(context) {
     // The command has been defined in the package.json file
     // Now provide the implementation of the command with  registerCommand
     // The commandId parameter must match the command field in package.json
-    let disposable = vscode.commands.registerCommand('extension.CreateDefinition', function () {
+    let disposable = vscode.commands.registerCommand('cpp-code-actions.CreateDefinition', function () {
         // The code you place here will be executed every time your command is executed
         vscode.workspace.onDidChangeTextDocument(e => {
             if (e.document === vscode.window.activeTextEditor.document && doc_listen_to_change) {
